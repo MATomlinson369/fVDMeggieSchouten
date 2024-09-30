@@ -186,10 +186,18 @@ header ul:nth-of-type(2) li:nth-of-type(2) p{
 }
 
 
+header nav ul{
 
+    background-color: #ffff00;
+    transform: translate(-100%, 0%);
+    transition: 1s ease-in-out;
+    
+}
 
-    
-    
+header nav ul.toonMenu {
+    transform: translate(0%, 0%);
+  }
+
  
 
 /* Carousel */
