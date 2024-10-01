@@ -8,6 +8,199 @@ body{
     padding: 0;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* relavante code ↓↓↓↓↓ */
+
+header .menu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  background-color: yellow;
+}
+
+header  .menu a {
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+header  .menu a img {
+  height: 30px;
+  width: 30px;
+  display: block;
+}
+
+header  .menu {
+  justify-self: center;
+}
+
+header  .menu button {
+  background: none;
+  border: none;
+
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+header > .menu button img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+header > .menu div {
+  justify-self: flex-end;
+}
+
+/* menu dicht */
+header .menu > .menu div {
+  z-index: 1;
+  background: red;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  translate: 0 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  transition: ease-in-out 0.5s;
+}
+
+/* menu open */
+.menu.toonMenu div {
+  translate: 0% 0%;
+  overflow-y: auto;
+}
+
+header .menu div div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+header .menu div ul {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+  
+    /* Font size variables for different font size modes */
+    --base-font-size: 16px;
+    --heading-font-size: 24px;
+    --button-font-size: 14px;
+  }
+
+body:has(input[value="dark"]:checked) {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+   
+
+  }
+
+  .slider section:has(input[value="dark"]:checked) {
+  background-color: white;
+    --text-color: black;
+    
+   
+
+  }
+
+
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+  }
+  
+  h1, h2, h3 {
+    font-size: var(--heading-font-size);
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: var(--button-font-size);
+  }
+  
+  a {
+    color: var(--secondary-color);
+  }
+  
+  body:has(input[value="small"]:checked) {
+    --base-font-size: 14px;  /* Smaller font size */
+    --heading-font-size: 20px;
+    --button-font-size: 12px;
+  }
+  
+  body:has(input[value="medium"]:checked) {
+    --base-font-size: 16px;  /* Default/Medium font size */
+    --heading-font-size: 24px;
+    --button-font-size: 14px;
+  }
+  
+  body:has(input[value="large"]:checked) {
+    --base-font-size: 18px;  /* Larger font size */
+    --heading-font-size: 28px;
+    --button-font-size: 16px;
+  }
+  
+
 
 /* Header */
 
