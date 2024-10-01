@@ -12,8 +12,6 @@ body{
 
 
 
-
-
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
@@ -113,7 +111,7 @@ header ul{
     justify-content: space-between;
     padding: 1em;
     padding-top: 3em;
-    z-index: 10000000000;
+    z-index: 2;
 }
 
 header ul li:first-of-type img{
@@ -249,30 +247,28 @@ header ul:nth-of-type(2) li:nth-of-type(2) {
 
 
 
-header ul:nth-of-type(2) li:nth-of-type(2) p{
-    background-color: rgb(248, 228, 76);
-    border: none;
-    color: red;
-  display: flex;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-   
-   
-}
 
 
-header nav ul{
 
+header .hamburger-nav {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
     background-color: #ffff00;
-    transform: translate(-100%, 0%);
+    transform: translate(0%, 100%);
     transition: 1s ease-in-out;
-    
+    z-index: 3;
+
 }
 
-header nav ul.toonMenu {
+header .hamburger-nav.toonMenu {
     transform: translate(0%, 0%);
+
   }
+
+  
 
  
 
